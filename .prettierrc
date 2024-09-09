@@ -1,0 +1,32 @@
+{
+  "tabWidth": 2,
+  "useTabs": true,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "printWidth": 120,
+  "htmlWhitespaceSensitivity": "ignore",
+  "importOrder": [
+    "^/assets/styles/(.*)$",
+    "^./components/animations/(.*)$",
+    "^./components/blocks/(.*)$",
+    "^./components/(.*)$",
+    "^./utils/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "overrides": [
+    {
+      "files": "*.twig",
+      "options": {
+        "parser": "liquid-html",
+        "singleQuote": false
+      }
+    }
+  ]
+}

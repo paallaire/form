@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["index.html"],
+  content: ["index.html", "validation.html"],
   theme: {
     extend: {},
   },
@@ -8,6 +8,5 @@ export default {
     require('@tailwindcss/typography')({
       className: 'wysiwyg',
     }),
-    require("@tailwindcss/forms"),
   ],
 };

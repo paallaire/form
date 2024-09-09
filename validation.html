@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JustValidate</title>
+</head>
+
+<body>
+  https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/detailed-custom-validation.html
+  <br />
+  https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript
+  <div class="antialiased text-gray-900 px-6">
+    <div class="max-w-xl mx-auto py-12 md:max-w-4xl">
+
+      <h1 class="text-4xl">Styleguide</h1>
+
+      <form class="mt-6" id="demo_form" action="https://httpbin.org/post" method="post" novalidate>
+        <div class="mt-8 grid grid-cols-1 gap-6 items-start">
+
+          <label class="control-input" for="input-text">
+            <span class="input-label">Input (text)</span>
+            <input type="text" class="form-input mt-1 block w-full" id="input-text" name="input_text" placeholder="john@example.com">
+          </label>
+          <label class="control-input" for="input-email">
+            <span class="input-label">Input (email)</span>
+            <input type="email" class="form-input mt-1 block w-full" id="input-email" name="input_email" placeholder="john@example.com" required>
+            <div class="input-message-error" aria-live="polite"></div>
+          </label>
+
+          <button type="submit" class="!bg-blue-800 !text-white hover:!bg-blue-950 p-3 mt-4">Submit</button>
+          <div class="form-message mt-4 bg-red-500 p-3" hidden>Merci</div>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

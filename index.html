@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JustValidate</title>
+  <title>Styleguide</title>
 </head>
 
 <body>
@@ -13,44 +13,159 @@
   <div class="antialiased text-gray-900 px-6">
     <div class="max-w-xl mx-auto py-12 md:max-w-4xl">
 
-      <h1 class="text-4xl"><a href="https://just-validate.dev/" target="_blank">JustValidate</a></h1>
+      <h1 class="text-4xl">Styleguide</h1>
 
-      <div class="wysiwyg mt-4 max-w-none">
-        <p>Modern form validation library<br />Simple, powerful and lightweight (~5kb gzip). Written in Typescript, and has no dependencies (no
-          JQuery!)</p>
-      </div>
-
-      <form class="mt-6" id="localisation_form" autocomplete="off" novalidate="novalidate">
-        <div class="grid grid-cols-1 gap-6">
-
-          <div class="block">
-            <label class="input-label" for="localisation_language">Select language</label>
-            <select class="form-select block w-full mt-1" id="localisation_language">
-              <option value="">--Please select an option--</option>
-              <option value="en" selected="">English</option>
-              <option value="fr">French</option>
-            </select>
+      <form class="mt-6" id="html_form" action="/" method="get">
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+          <div class="grid grid-cols-1 gap-6">
+            <label class="control-input" for="input-text">
+              <span class="input-label">Input (text)</span>
+              <input type="text" class="form-input mt-1 block w-full" id="input-text" name="input_text" placeholder="john@example.com">
+            </label>
+            <label class="control-input" for="input-email">
+              <span class="input-label">Input (email) control-input</span>
+              <input type="email" class="form-input mt-1 block w-full" id="input-email" name="input_email" placeholder="john@example.com" required>
+            </label>
+            <label class="control-input" for="input-email-multiple">
+              <span class="input-label">Input (email, multiple)</span>
+              <input type="email" multiple class="form-input mt-1 block w-full" id="input-email-multiple" name="input_email_multiple"
+                placeholder="john@example.com">
+            </label>
+            <label class="control-input" for="input-password">
+              <span class="input-label">Input (password)</span>
+              <input type="password" class="form-input mt-1 block w-full" id="input-password" name="input_password" placeholder="john@example.com">
+            </label>
+            <label class="control-input" for="input-date">
+              <span class="input-label">Input (date)</span>
+              <input type="date" class="form-input mt-1 block w-full" id="input-date" name="input_date">
+            </label>
+            <label class="control-input" for="input-datetime-local">
+              <span class="input-label">Input (datetime-local)</span>
+              <input type="datetime-local" class="form-input mt-1 block w-full" id="input-datetime-local" name="input_datetime_local">
+            </label>
+            <label class="control-input" for="input-month">
+              <span class="input-label">Input (month)</span>
+              <input type="month" class="form-input mt-1 block w-full" id="input-month" name="input_month">
+            </label>
+            <label class="control-input" for="input-number">
+              <span class="input-label">Input (number)</span>
+              <input type="number" class="form-input mt-1 block w-full" id="input-number" name="input_number">
+            </label>
+            <label class="control-input" for="input-search">
+              <span class="input-label">Input (search)</span>
+              <input type="search" class="form-input mt-1 block w-full" id="input-search" name="input_search">
+            </label>
+            <label class="control-input" for="input-time">
+              <span class="input-label">Input (time)</span>
+              <input type="time" class="form-input mt-1 block w-full" id="input-time" name="input_time">
+            </label>
+            <label class="control-input" for="input-week">
+              <span class="input-label">Input (week)</span>
+              <input type="week" class="form-input mt-1 block w-full" id="input-week" name="input_week">
+            </label>
           </div>
-
-          <div class="block">
-            <label class="input-label" for="localisation_form_name">Name</label>
-            <div class="input-wrapper">
-              <input id="localisation_form_name" class="form-input mt-1 block w-full" autocomplete="off" type="text" placeholder="Enter your name" />
-            </div>
+          <div class="grid grid-cols-1 gap-6">
+            <label class="control-input" for="input-tel">
+              <span class="input-label">Input (tel)</span>
+              <input type="tel" multiple class="form-input mt-1 block w-full" id="input-tel" name="input_tel" placeholder="john@example.com">
+            </label>
+            <label class="control-input" for="input-url">
+              <span class="input-label">Input (url)</span>
+              <input type="url" multiple class="form-input mt-1 block w-full" id="input-url" name="input_url" placeholder="john@example.com">
+            </label>
+            <label class="control-input" for="select-option">
+              <span class="input-label">Select</span>
+              <select class="form-select block w-full mt-1" id="select-option" name="select_option">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+              </select>
+            </label>
+            <label class="control-input" for="select-single-size">
+              <span class="input-label">Select (single, with size)</span>
+              <select class="form-select block w-full mt-1" size="3" id="select-single-size" name="select_single_size">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+                <option value="option5">Option 5</option>
+              </select>
+            </label>
+            <label class="control-input" for="select-multiple">
+              <span class="input-label">Select (multiple)</span>
+              <select class="form-multiselect block w-full mt-1" multiple id="select-multiple" name="select_multiple[]">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+                <option value="option5">Option 5</option>
+              </select>
+            </label>
+            <label class="control-input" for="select-multiple-size">
+              <span class="input-label">Select (multiple, with size)</span>
+              <select class="form-multiselect block w-full mt-1" multiple size="3" id="select-multiple-size" name="select_multiple_size[]">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+                <option value="option5">Option 5</option>
+              </select>
+            </label>
+            <label class="control-input" for="textarea">
+              <span class="input-label">Textarea</span>
+              <textarea class="form-textarea mt-1 block w-full h-24" rows="3" id="textarea" name="textarea"
+                placeholder="Enter some long form content."></textarea>
+            </label>
+            <fieldset class="block">
+              <legend class="input-label">Checkboxes</legend>
+              <div class="mt-2">
+                <div>
+                  <label class="inline-flex items-center" for="checkbox1">
+                    <input class="form-checkbox" type="checkbox" id="checkbox1" name="checkbox_options" value="option1" checked>
+                    <span class="ml-2">Option 1</span>
+                  </label>
+                </div>
+                <div>
+                  <label class="inline-flex items-center" for="checkbox2">
+                    <input class="form-checkbox" type="checkbox" id="checkbox2" name="checkbox_options" value="option2">
+                    <span class="ml-2">Option 2</span>
+                  </label>
+                </div>
+                <div>
+                  <label class="inline-flex items-center" for="checkbox3">
+                    <input class="form-checkbox" type="checkbox" id="checkbox3" name="checkbox_options" value="option3">
+                    <span class="ml-2">Option 3</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="block">
+              <legend class="input-label">Radio Buttons</legend>
+              <div class="mt-2">
+                <div>
+                  <label class="inline-flex items-center" for="radio1">
+                    <input class="form-radio" type="radio" id="radio1" name="radio_options" value="1" checked>
+                    <span class="ml-2">Option 1</span>
+                  </label>
+                </div>
+                <div>
+                  <label class="inline-flex items-center" for="radio2">
+                    <input class="form-radio" type="radio" id="radio2" name="radio_options" value="2">
+                    <span class="ml-2">Option 2</span>
+                  </label>
+                </div>
+                <div>
+                  <label class="inline-flex items-center" for="radio3">
+                    <input class="form-radio" type="radio" id="radio3" name="radio_options" value="3">
+                    <span class="ml-2">Option 3</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
           </div>
-
-          <div class="block">
-            <label class="input-label" for="localisation_form_email">Email</label>
-            <div class="input-wrapper">
-              <input id="localisation_form_email" class="form-input mt-1 block w-full" autocomplete="off" type="text"
-                placeholder="Enter your email" />
-            </div>
-          </div>
-        </div>
-        <div class="block mt-4">
-          <button type="submit" class="button">Submit</button>
+          <button>Submit</button>
         </div>
       </form>
+
 
     </div>
   </div>

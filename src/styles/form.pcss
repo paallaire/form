@@ -1,0 +1,120 @@
+/* Common */
+.form-textarea,
+.form-multiselect,
+.form-select,
+.form-input {
+	@apply block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm outline-none ring-1 ring-inset ring-gray-300;
+	@apply placeholder:text-gray-400;
+	@apply focus:ring-2 focus:ring-inset focus:ring-indigo-600;
+	@apply sm:text-sm sm:leading-6;
+
+	/*
+	&:required:user-invalid {
+		@apply text-red-600 ring-2 ring-inset ring-red-600;
+	}
+
+	&:required:user-valid {
+		@apply text-green-600 ring-2 ring-inset ring-green-600;
+	}
+	*/
+
+	.control-input.is-invalid &,
+	&:required:user-invalid {
+		@apply text-red-600 ring-2 ring-inset ring-red-600;
+	}
+
+	/*
+	.control-input.is-valid &,
+	&:required:user-valid {
+		@apply text-green-600 ring-2 ring-inset ring-green-600;
+	}
+	*/
+}
+
+.input-message-error {
+	@apply text-red-600;
+}
+
+/* Specification */
+.control-input {
+	/*
+		&:has(input:required:user-invalid) {
+		.input-label {
+			@apply text-red-600;
+		}
+	}
+
+	&:has(input:required:user-valid) {
+		.input-label {
+			@apply text-green-600;
+		}
+	}
+	*/
+
+	&.is-invalid,
+	&:has(input:required:user-invalid) {
+		.input-label {
+			@apply text-red-600;
+		}
+	}
+
+	/*
+	&.is-valid,
+	&:has(input:required:user-valid) {
+		.input-label {
+			@apply text-green-600;
+		}
+	}
+	*/
+}
+
+.input-label {
+	@apply block text-sm font-medium leading-6 text-gray-900;
+}
+
+.form-input {
+}
+
+.form-select {
+	@apply appearance-none bg-no-repeat pr-10;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+	background-position: right 0.5rem center;
+	background-size: 1.5em 1.5em;
+
+	&[multiple],
+	&:where([size]:not([size='1'])) {
+		@apply pr-3;
+		background-image: initial;
+		background-position: initial;
+		background-repeat: unset;
+		background-size: initial;
+	}
+}
+
+.form-multiselect {
+	@apply rounded-none;
+}
+
+.form-checkbox {
+	@apply h-4 w-4 rounded border-gray-300 text-indigo-600 appearance-none ring-1 ring-inset ring-gray-300;
+  @apply focus:ring-2 focus:ring-inset focus:ring-indigo-600;
+
+	&:checked {
+    @apply ring-0 border-transparent bg-current bg-center bg-no-repeat;
+		background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    background-size: 100% 100%;
+	}
+}
+
+
+.form-radio {
+	@apply h-4 w-4 rounded-full border-gray-300 text-indigo-600 appearance-none ring-1 ring-inset ring-gray-300;
+  @apply focus:ring-2 focus:ring-inset focus:ring-indigo-600;
+
+	&:checked {
+    @apply ring-0 border-transparent bg-current bg-center bg-no-repeat;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+    background-size: 100% 100%;
+	}
+}
+

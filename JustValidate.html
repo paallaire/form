@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JustValidate</title>
+</head>
+
+<body>
+
+  <div class="antialiased text-gray-900 px-6">
+    <div class="max-w-xl mx-auto py-12 md:max-w-4xl">
+
+      <h1 class="text-4xl"><a href="https://just-validate.dev/" target="_blank">JustValidate</a></h1>
+
+      <div class="wysiwyg mt-4 max-w-none">
+        <p>Modern form validation library<br />Simple, powerful and lightweight (~5kb gzip). Written in Typescript, and has no dependencies (no
+          JQuery!)</p>
+      </div>
+
+      <form class="mt-6" id="just_validate_form" autocomplete="off" novalidate="novalidate" action="https://httpbin.org/post" method="post">
+        <div class="grid grid-cols-1 gap-6">
+
+          <div class="block">
+            <label class="input-label" for="localisation_language">Select language <span aria-hidden="true">*</span></label>
+            <select class="form-select block w-full mt-1" id="localisation_language" aria-required="true">
+              <option value="">--Please select an option--</option>
+              <option value="en" selected="">English</option>
+              <option value="fr">French</option>
+            </select>
+
+          </div>
+
+          <div class="block">
+            <label class="input-label" for="localisation_form_name">Name <span aria-hidden="true">*</span></label>
+            <div class="input-wrapper">
+              <input id="localisation_form_name" class="form-input mt-1 block w-full" autocomplete="off" type="text" placeholder="Enter your name"
+                aria-required="true" />
+            </div>
+          </div>
+
+          <div class="block">
+            <label class="input-label" for="localisation_form_email">Email <span aria-hidden="true">*</span></label>
+            <div class="input-wrapper">
+              <input id="localisation_form_email" class="form-input mt-1 block w-full" autocomplete="off" type="text" aria-required="true"
+                placeholder="Enter your email" />
+            </div>
+          </div>
+
+          <fieldset class="block" id="output_format_checkbox_group">
+            <legend>Output format <span aria-hidden="true">*</span></legend>
+            <div>
+              <input type="radio" name="format" id="txt" class="form-radio" value="txt">
+              <label class="input-label" for="txt">Text file</label>
+            </div>
+            <div>
+              <input type="radio" name="format" id="csv" class="form-radio" value="csv">
+              <label class="input-label" for="csv">CSV file</label>
+            </div>
+          </fieldset>
+
+        </div>
+        <div class="block mt-4">
+          <button type="submit" class="button">Submit</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
